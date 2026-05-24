@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bogs0apghbkwh"]
+
+[node name="World" type="Node2D" unique_id=1097209741]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1269072521]
+position = Vector2(576, 324)
+
+[node name="Map" type="Node2D" parent="." unique_id=1277790649]
+
+[node name="Debug Map" type="Node2D" parent="Map" unique_id=1273244288]
