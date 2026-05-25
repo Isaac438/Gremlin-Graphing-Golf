@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bogs0apghbkwh"]
 
 [ext_resource type="PackedScene" uid="uid://70bdfgke4mq1" path="res://debug_map.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://cdm3gld50tkkc" path="res://graph_and_ball.tscn" id="2_fj7yv"]
 
 [node name="World" type="Node2D" unique_id=1097209741]
 
@@ -10,3 +11,5 @@ position = Vector2(576, 324)
 [node name="Map" type="Node2D" parent="." unique_id=1277790649]
 
 [node name="Debug Map" parent="Map" unique_id=1896642430 instance=ExtResource("1_f3sb7")]
+
+[node name="Graph and Ball" parent="." unique_id=1823489549 instance=ExtResource("2_fj7yv")]

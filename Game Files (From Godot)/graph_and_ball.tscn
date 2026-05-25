@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cdm3gld50tkkc"]
+
+[node name="Graph and Ball" type="Node2D" unique_id=1823489549]
+
+[node name="Graph" type="Node2D" parent="." unique_id=363621363]
+
+[node name="Ball" type="Node2D" parent="." unique_id=1855845159 groups=["Ball"]]
