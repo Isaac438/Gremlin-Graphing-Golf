@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://cdm3gld50tkkc"]
 
+[ext_resource type="Script" uid="uid://cq4qy6bv8yey2" path="res://scenes/graph.gd" id="1_ha80p"]
+
 [node name="Graph and Ball" type="Node2D" unique_id=1823489549]
 
 [node name="Graph" type="Node2D" parent="." unique_id=363621363]
+script = ExtResource("1_ha80p")
 
 [node name="Ball" type="Node2D" parent="." unique_id=1855845159 groups=["Ball"]]

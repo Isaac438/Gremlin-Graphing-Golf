@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://70bdfgke4mq1"]
+
+[ext_resource type="Texture2D" uid="uid://qmyaabmds0xj" path="res://textures/hole.png" id="1_fmyhy"]
+[ext_resource type="Script" uid="uid://oegg4ij1q11p" path="res://scripts/hole.gd" id="1_sbu4c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tb863"]
+radius = 34.0147
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_iv4pa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_speln"]
+size = Vector2(1151, 185)
+
+[node name="Debug Map" type="Node2D" unique_id=1896642430]
+
+[node name="Hole" type="Node2D" parent="." unique_id=2069896056]
+position = Vector2(1033, 403)
+script = ExtResource("1_sbu4c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hole" unique_id=1639165570]
+texture = ExtResource("1_fmyhy")
+
+[node name="Area2D" type="Area2D" parent="Hole" unique_id=330330896]
+position = Vector2(-5, 55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole/Area2D" unique_id=601386292]
+shape = SubResource("CircleShape2D_tb863")
+
+[node name="Grass" type="Node2D" parent="." unique_id=955693489 groups=["Land"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="Grass" unique_id=2116103149 groups=["Land"]]
+modulate = Color(0.03137255, 0.4862745, 0.02745098, 1)
+self_modulate = Color(0.08878011, 0.60850644, 0.2593206, 1)
+position = Vector2(575, 553.5)
+scale = Vector2(1150, 188.99995)
+texture = SubResource("CanvasTexture_iv4pa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass" unique_id=176872852 groups=["Land"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass/StaticBody2D" unique_id=1797230902 groups=["Land"]]
+position = Vector2(574.5, 553.5)
+shape = SubResource("RectangleShape2D_speln")

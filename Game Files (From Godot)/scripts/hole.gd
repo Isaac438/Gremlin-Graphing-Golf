@@ -9,5 +9,7 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("Ball"):
 		print("Great Shot!")
+	elif body.is_in_group("Land"):
+		pass
 	else:
 		print("Well it wasn't a ball but whatever...")

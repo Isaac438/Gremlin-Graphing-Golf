@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bogs0apghbkwh"]
 
-[ext_resource type="PackedScene" uid="uid://70bdfgke4mq1" path="res://debug_map.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://cdm3gld50tkkc" path="res://graph_and_ball.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://70bdfgke4mq1" path="res://scenes/debug_map.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://cdm3gld50tkkc" path="res://scenes/graph_and_ball.tscn" id="2_fj7yv"]
 
 [node name="World" type="Node2D" unique_id=1097209741]
 
