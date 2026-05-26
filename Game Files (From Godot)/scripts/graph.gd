@@ -1,17 +1,28 @@
 extends Node2D
 
-@export var expression_text := "-2.5"
 @export var graph_scale := 50.0
 @export var point_count := 400
 
 var expression := Expression.new()
+var expression_text := "x"
+var expression_valid := false
 
-func _ready():
-	expression.parse(expression_text, ["x"])
-	queue_redraw()
+func _process(delta: float) -> void:
+	if expression_text != global.function:
+		expression_text = global.function
+
+		var error = expression.parse(expression_text, ["x"])
+
+		expression_valid = (error == OK)
+
+		queue_redraw()
 
 func _draw():
+	if !expression_valid:
+		return
+
 	var last_point = null
+
 	for i in range(point_count):
 		var x = (i - point_count / 2.0) / 20.0
 
