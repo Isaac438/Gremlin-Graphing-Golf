@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://70bdfgke4mq1" path="res://scenes/debug_map.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://cdm3gld50tkkc" path="res://scenes/graph_and_ball.tscn" id="2_fj7yv"]
-[ext_resource type="Script" uid="uid://bwkesycv25d27" path="res://scenes/graph_input.gd" id="3_4wyf3"]
+[ext_resource type="Script" uid="uid://bwkesycv25d27" path="res://scripts/graph_input.gd" id="3_4wyf3"]
 [ext_resource type="Script" uid="uid://bu8wkt1njpmjr" path="res://scripts/launch_button.gd" id="4_k0juu"]
 
 [node name="World" type="Node2D" unique_id=1097209741]
