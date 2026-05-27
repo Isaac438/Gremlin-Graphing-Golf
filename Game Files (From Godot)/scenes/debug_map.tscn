@@ -13,17 +13,17 @@ size = Vector2(1153, 189)
 
 [node name="Debug Map" type="Node2D" unique_id=1896642430]
 
-[node name="Hole" type="Node2D" parent="." unique_id=2069896056]
+[node name="Hole" type="Node2D" parent="." unique_id=2069896056 groups=["Hole"]]
 position = Vector2(1033, 403)
 script = ExtResource("1_sbu4c")
 
-[node name="Sprite2D" type="Sprite2D" parent="Hole" unique_id=1639165570]
+[node name="Sprite2D" type="Sprite2D" parent="Hole" unique_id=1639165570 groups=["Hole"]]
 texture = ExtResource("1_fmyhy")
 
-[node name="Area2D" type="Area2D" parent="Hole" unique_id=330330896]
+[node name="Area2D" type="Area2D" parent="Hole" unique_id=330330896 groups=["Hole"]]
 position = Vector2(-5, 55)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole/Area2D" unique_id=601386292]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole/Area2D" unique_id=601386292 groups=["Hole"]]
 shape = SubResource("CircleShape2D_tb863")
 
 [node name="Grass" type="Node2D" parent="." unique_id=955693489 groups=["Land"]]

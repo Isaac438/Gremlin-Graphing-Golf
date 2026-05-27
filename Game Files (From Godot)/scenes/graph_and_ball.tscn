@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bfyew5jvrw0of" path="res://textures/icon.svg" id="3_05bo0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_05bo0"]
+radius = 61.0
 
 [node name="Graph and Ball" type="Node2D" unique_id=1823489549]
 

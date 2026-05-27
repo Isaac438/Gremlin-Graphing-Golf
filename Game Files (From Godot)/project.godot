@@ -23,6 +23,7 @@ global="*uid://xrvny20tkqc4"
 
 Ball=""
 Land=""
+Hole=""
 
 [physics]
 
