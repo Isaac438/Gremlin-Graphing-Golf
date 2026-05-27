@@ -8,8 +8,10 @@ func _ready():
 
 func _on_area_entered(body):
 	if body.is_in_group("Ball"):
+		global.output = "Great Shot!"
 		print("Great Shot!")
 	elif body.is_in_group("Land"):
 		pass
 	else:
+		global.output = "Well it wasn't a ball but whatever..."
 		print("Well it wasn't a ball but whatever...")

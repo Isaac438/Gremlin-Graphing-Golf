@@ -6,53 +6,41 @@ var moving := false
 @onready var area: Area2D = $Area2D
 var expression := Expression.new()
 var expression_ready := false
-var expression_text = global.function
-
-func parse_input(text):
-	text = text.replace(" ", "")
-
-	while text.contains("^"):
-		var index = text.find("^")
-		var base = text.substr(index - 1, 1)
-		var exponent = text.substr(index + 1, 1).to_int()
-		var expanded = base
-
-		for i in range(exponent - 1):
-			expanded += "*" + base
-
-		text = text.substr(0, index - 1) + expanded + text.substr(index + 2)
-	
-	var regex = RegEx.new()
-	regex.compile("(\\d+)(x)")
-	text = regex.sub(text, "$1*$2", true)
-	
-	return text
+var timeout = 0.75 / speed
 
 func _ready():
-	set_expression(global.function)
+	set_expression(global.expression_text)
 	area.area_entered.connect(_on_area_entered)
-	area.body_entered.connect(_on_area_entered)
+	area.body_entered.connect(_on_body_entered)
 	
 func set_expression(expr_text: String):
 	var err = expression.parse(expr_text, ["x"])
 	expression_ready = (err == OK)
 
 func start():
+	set_expression(global.expression_text)
 	t = 0.0
 	moving = true
 
+func _on_body_entered(body):
+	if body.is_in_group("Hole"):
+		pass
+	else:
+		moving = false
+		global_position = Vector2.ZERO
+		global.output = "You hit a hazard!"
+		print("bad")
 func _on_area_entered(area):
 	if area.is_in_group("Hole"):
 		pass
 	else:
 		moving = false
-		global_position = Vector2(0,0)
+		global_position = Vector2.ZERO
 		print("bad")
 
 func _process(delta):
 	if !moving or !expression_ready:
 		return
-
 	t += delta * speed
 
 	var x = (t * 10.0) - 5.0
@@ -62,3 +50,7 @@ func _process(delta):
 		return
 
 	global_position = Vector2(x * 50.0, -y * 50.0) + get_viewport_rect().size / 2.0
+	if t >= timeout:
+		global.output = "You Missed!"
+		moving = false
+		global_position = Vector2.ZERO

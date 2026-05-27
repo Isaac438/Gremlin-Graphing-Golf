@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cdm3gld50tkkc" path="res://scenes/graph_and_ball.tscn" id="2_fj7yv"]
 [ext_resource type="Script" uid="uid://bwkesycv25d27" path="res://scripts/graph_input.gd" id="3_4wyf3"]
 [ext_resource type="Script" uid="uid://bu8wkt1njpmjr" path="res://scripts/launch_button.gd" id="4_k0juu"]
+[ext_resource type="Script" uid="uid://dnghmi3axf7od" path="res://scripts/parser.gd" id="5_71j4m"]
+[ext_resource type="Script" uid="uid://d2qe6dteuvxgt" path="res://scripts/label.gd" id="5_qfnet"]
 
 [node name="World" type="Node2D" unique_id=1097209741]
 
@@ -33,3 +35,13 @@ offset_right = 1152.0
 offset_bottom = 648.0
 text = "Launch"
 script = ExtResource("4_k0juu")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=973091308]
+offset_left = 319.0
+offset_top = 616.0
+offset_right = 587.0
+offset_bottom = 647.0
+script = ExtResource("5_qfnet")
+
+[node name="Parser" type="Node" parent="." unique_id=1139854862]
+script = ExtResource("5_71j4m")
