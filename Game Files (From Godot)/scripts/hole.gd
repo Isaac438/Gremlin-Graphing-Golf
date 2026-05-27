@@ -10,6 +10,7 @@ func _on_area_entered(body):
 	if body.is_in_group("Ball"):
 		global.output = "Great Shot!"
 		print("Great Shot!")
+		global.hole_hit = true
 	elif body.is_in_group("Land"):
 		pass
 	else:
