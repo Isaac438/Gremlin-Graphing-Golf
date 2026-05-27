@@ -27,7 +27,7 @@ func parse_input(text):
 	
 	return text
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if expression_text != global.function:
 		expression_text = global.function
 		expression_text = parse_input(expression_text)

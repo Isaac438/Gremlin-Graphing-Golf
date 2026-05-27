@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://cdm3gld50tkkc"]
 
 [ext_resource type="Script" uid="uid://cq4qy6bv8yey2" path="res://scripts/graph.gd" id="1_ha80p"]
+[ext_resource type="Script" uid="uid://btxmrfdmy0d8" path="res://scenes/ball.gd" id="2_ho6a5"]
+[ext_resource type="Texture2D" uid="uid://bfyew5jvrw0of" path="res://textures/icon.svg" id="3_05bo0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_05bo0"]
 
 [node name="Graph and Ball" type="Node2D" unique_id=1823489549]
 
-[node name="Graph" type="Node2D" parent="." unique_id=363621363]
+[node name="Graph" type="Node2D" parent="." unique_id=363621363 groups=["Ball"]]
 script = ExtResource("1_ha80p")
 
 [node name="Ball" type="Node2D" parent="." unique_id=1855845159 groups=["Ball"]]
+script = ExtResource("2_ho6a5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=1759742564 groups=["Ball"]]
+texture = ExtResource("3_05bo0")
+
+[node name="Area2D" type="Area2D" parent="Ball" unique_id=1760130361 groups=["Ball"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/Area2D" unique_id=1647913827 groups=["Ball"]]
+shape = SubResource("CircleShape2D_05bo0")
