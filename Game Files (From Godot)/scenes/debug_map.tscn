@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://qmyaabmds0xj" path="res://textures/hole.png" id="1_fmyhy"]
 [ext_resource type="Script" uid="uid://oegg4ij1q11p" path="res://scripts/hole.gd" id="1_sbu4c"]
+[ext_resource type="Script" uid="uid://cbiourbowhmcl" path="res://scripts/grass.gd" id="3_speln"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tb863"]
 radius = 34.0147
@@ -27,16 +28,15 @@ position = Vector2(-5, 55)
 shape = SubResource("CircleShape2D_tb863")
 
 [node name="Grass" type="Node2D" parent="." unique_id=955693489 groups=["Land"]]
+script = ExtResource("3_speln")
 
 [node name="Sprite2D" type="Sprite2D" parent="Grass" unique_id=2116103149 groups=["Land"]]
 modulate = Color(0.03137255, 0.4862745, 0.02745098, 1)
 self_modulate = Color(0.08878011, 0.60850644, 0.2593206, 1)
-position = Vector2(575.99994, 553.5)
 scale = Vector2(1151.9999, 188.99995)
 texture = SubResource("CanvasTexture_iv4pa")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Grass" unique_id=176872852 groups=["Land"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grass/StaticBody2D" unique_id=1797230902 groups=["Land"]]
-position = Vector2(575.5, 553.5)
 shape = SubResource("RectangleShape2D_speln")
